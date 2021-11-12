@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+ln lgtm.txt /usr/local/bin/lgtm.txt
+ln lgtm /usr/local/bin/lgtm
