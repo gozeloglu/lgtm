@@ -27,3 +27,7 @@ $ lgtm
 ```
 
 Finally, you can use this command anytime that you need. It basically copies the LGTM fancy test to your clipboard. 
+
+## LICENSE
+
+[MIT](https://github.com/gozeloglu/lgtm/blob/main/LICENSE)
