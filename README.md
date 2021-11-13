@@ -59,6 +59,10 @@ For bug reporting, feature requests, and contributions, please see:
 https://github.com/gozeloglu/lgtm
 ````
 
+## Sample
+
+![lgtm demo](demo/lgtm-demo.mov)
+
 ## LICENSE
 
 [MIT](https://github.com/gozeloglu/lgtm/blob/main/LICENSE)
