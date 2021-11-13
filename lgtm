@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
 
-script_dir=$(dirname "$0")
-pbcopy <"$script_dir"/lgtm.txt
+text="
+  _    ___ _____ __  __
+ | |  / __|_   _|  \/  |
+ | |_| (_ | | | | |\/| |
+ |____\___| |_| |_|  |_|
+"
+
+echo "$text" | pbcopy
