@@ -1,8 +1,8 @@
 # lgtm
 
 lgtm is a simple tool for helping LGTM fancy text message to clipboard via command line. LGTM is an abbreviation for
-**Looks Good To Me**. Generally, it is used during code reviews when the pull request is ready to merge on main branch. Its
-usage is so simple.
+**Looks Good To Me**. Generally, it is used during code reviews when the pull request is ready to merge on main branch.
+Its usage is so simple.
 
 ## Setup
 
@@ -26,7 +26,24 @@ your directory and run the following command.
 $ lgtm
 ```
 
-Finally, you can use this command anytime that you need. It basically copies the LGTM fancy test to your clipboard. 
+Finally, you can use this command anytime that you need. It basically copies the LGTM fancy test to your clipboard.
+
+## Usage
+
+lgtm usage is simple.
+
+````shell
+A simple command-line tool for copying LGTM fancy text to your clipboard.
+
+Usage: lgtm [option]
+
+OPTIONS:
+-h, --help        Print this usage information
+-v, --version     Print the lgtm version
+
+For bug reporting, feature requests, and contributions, please see:
+https://github.com/gozeloglu/lgtm
+````
 
 ## LICENSE
 

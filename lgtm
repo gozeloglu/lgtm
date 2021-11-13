@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+readonly version=0.3.0
+
 text="
   _    ___ _____ __  __
  | |  / __|_   _|  \/  |
@@ -7,4 +9,43 @@ text="
  |____\___| |_| |_|  |_|
 "
 
-echo "$text" | pbcopy
+usage() {
+  cat <<USAGE_TEXT
+A simple command-line tool for copying LGTM fancy text to your clipboard.
+
+Usage: lgtm [option]
+
+OPTIONS:
+-h, --help        Print this usage information
+-v, --version     Print the lgtm version
+
+For bug reporting, feature requests, and contributions, please see:
+https://github.com/gozeloglu/lgtm
+USAGE_TEXT
+}
+
+lgtm_cp() {
+  echo "$text" | pbcopy
+}
+
+if (( $# == 0 )); then
+  lgtm_cp
+  exit
+fi
+
+case "$1" in
+--help | -h)
+  usage
+  shift
+  ;;
+--version | -v)
+  echo $version
+  exit
+  shift
+  ;;
+*)
+  echo "lgtm: $*: Invalid command"
+  echo "See lgtm --help."
+  shift
+  ;;
+esac
