@@ -61,7 +61,7 @@ https://github.com/gozeloglu/lgtm
 
 ## Sample
 
-![lgtm demo](demo/lgtm-demo.mov)
+![lgtm demo](demo/lgtm-demo.gif)
 
 ## LICENSE
 
