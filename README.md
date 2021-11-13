@@ -4,18 +4,32 @@ lgtm is a simple tool for helping LGTM fancy text message to clipboard via comma
 **Looks Good To Me**. Generally, it is used during code reviews when the pull request is ready to merge on main branch.
 Its usage is so simple.
 
-## Setup
+## Installation
+
+You can install lgtm in 2 different way.
+
+### Manual Installation
 
 You can use `setup` script to make script ready for your environment.
 
 ```shell
-$ chmod +x setup
-$ ./setup
+chmod +x setup
+./setup
 ```
 
 It creates a symbolic link like a shortcut in Windows. Be aware of the location of the creating symbolic link. On my
 machine, I prefer to locate on `/usr/local/bin`. If it does not work for your machine, you can change with
 another `$PATH` directory.
+
+### Homebrew - macOS
+
+If you use [Homebrew](https://brew.sh/) you can install like this:
+
+````shell
+brew install lgtm
+````
+
+This command will install and make ready to use for you.
 
 ## Run
 
