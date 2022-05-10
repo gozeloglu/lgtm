@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-readonly version=0.4.0
+readonly version=0.5.0
 
-text="
+small="
 \`\`\`
   _    ___ _____ __  __
  | |  / __|_   _|  \/  |
@@ -11,11 +11,24 @@ text="
 \`\`\`
 "
 
+slant="
+\`\`\`
+   __   _____________  ___
+  / /  / ___/_  __/  |/  /
+ / /__/ (_ / / / / /|_/ / 
+/____/\___/ /_/ /_/  /_/  
+\`\`\`
+"
+
 usage() {
   cat <<USAGE_TEXT
 A simple command-line tool for copying LGTM fancy text to your clipboard.
 
-Usage: lgtm [option]
+Usage: lgtm [<option> | <argument>]
+
+Arguments:
+small   Copies small font text
+slant   Copies slant font text
 
 OPTIONS:
 -h, --help        Print this usage information
@@ -26,28 +39,46 @@ https://github.com/gozeloglu/lgtm
 USAGE_TEXT
 }
 
-lgtm_cp() {
-  echo "$text" | pbcopy
+lgtm_small() {
+  echo "$small" | pbcopy
 }
 
-if (( $# == 0 )); then
-  lgtm_cp
-  exit
-fi
+lgtm_slant() {
+  echo "$slant" | pbcopy
+}
 
-case "$1" in
---help | -h)
-  usage
-  shift
-  ;;
---version | -v)
-  echo $version
+# Default command. Copies small one. 
+if (( $# == 0 )); then 
+  lgtm_small
   exit
-  shift
-  ;;
-*)
-  echo "lgtm: $*: Invalid command"
-  echo "See lgtm --help."
-  shift
-  ;;
-esac
+fi 
+
+# If option or argument is passed.
+if (( $# == 1 )); then
+  case "$1" in
+    small)
+      lgtm_small
+      exit
+      shift
+      ;;
+    slant)
+      lgtm_slant
+      exit
+      shift
+      ;;
+    --help | -h)
+      usage
+      shift
+      ;;
+    --version | -v)
+      echo $version
+      exit
+      shift
+      ;;
+    *)
+      echo "lgtm: $*: Invalid command"
+      echo "See lgtm --help."
+      shift
+      ;;
+  esac
+fi
