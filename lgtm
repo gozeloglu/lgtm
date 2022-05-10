@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-readonly version=0.3.0
+readonly version=0.4.0
 
 text="
 \`\`\`
